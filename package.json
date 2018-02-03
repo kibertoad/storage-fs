@@ -1,0 +1,38 @@
+{
+  "name": "storage-fs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "mocha \"src/**/*spec.js\"",
+    "test-coverage": "nyc npm test",
+    "lint": "eslint . -f node_modules/eslint-html-reporter/reporter.js -o build/reports/eslint.html"
+  },
+  "dependencies": {
+    "mkdirp": "^0.5.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint-html-reporter": "^0.5.2",
+    "eslint": "^4.17.0",
+    "mocha": "^5.0.0",
+    "nyc": "^11.4.1"
+  },
+  "nyc": {
+    "description": "test coverage",
+    "include": [
+      "lib/**",
+      "!/**/test/**"
+    ],
+    "reporter": [
+      "html"
+    ],
+    "cache": true,
+    "all": true,
+    "report-dir": "./build/reports/coverage",
+    "check-coverage": true,
+    "lines": 90,
+    "statements": 90,
+    "functions": 90,
+    "branches": 55
+  }
+}
