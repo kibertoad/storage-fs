@@ -1,7 +1,13 @@
 {
   "name": "storage-fs",
   "version": "1.0.0",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kibertoad/storage-fs.git"
+  },
+  "private": false,
+  "author": "Igor Savin",
+  "license": "MIT",
   "scripts": {
     "test": "mocha \"src/**/*spec.js\"",
     "test-coverage": "nyc npm test",
